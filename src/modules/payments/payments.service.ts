@@ -114,7 +114,7 @@ export class PaymentsService {
     }
 
     const paymentId = `pay-${uuidv4().substring(0, 8)}`;
-    const cardLast4 = dto.cardLast4 || (dto.cardNumber ? dto.cardNumber.slice(-4) : undefined);
+    const cardLast4 = dto.cardNumber ? dto.cardNumber.slice(-4) : undefined;
     const receiptNumber = `REC-${new Date().getFullYear()}${String(Date.now()).slice(-6)}`;
 
     const payment: Payment = {

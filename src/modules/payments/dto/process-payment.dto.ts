@@ -24,11 +24,6 @@ export class ProcessPaymentDto {
   @IsString()
   cardNumber?: string;
 
-  @ApiPropertyOptional({ example: '4242', description: 'Últimos 4 dígitos de la tarjeta' })
-  @IsOptional()
-  @IsString()
-  cardLast4?: string;
-
   @ApiPropertyOptional({ example: 'Juan Pérez', description: 'Nombre del titular de la tarjeta' })
   @IsOptional()
   @IsString()
